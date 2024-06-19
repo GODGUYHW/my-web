@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bAVE</title>
+    <link rel="stylesheet" href="style-home.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="container">
+                <div class="logo">
+                    <h1>bAVE</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="feature.html">Share Your Travel Experience</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <section class="feature-place hidden">
+                <h1>Feature Places</h1>
+                <div class="card-slider">
+                    <div class="cards">
+                        <div class="card">
+                            <img src="image1.jpg" alt="Place 1">
+                            <div class="card-content">
+                                <h3>Place 1</h3>
+                                <p>Description of Place 1</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="image2.jpg" alt="Place 2">
+                            <div class="card-content">
+                                <h3>Place 2</h3>
+                                <p>Description of Place 2</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="image3.jpg" alt="Place 3">
+                            <div class="card-content">
+                                <h3>Place 3</h3>
+                                <p>Description of Place 3</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="prev" onclick="changeCard(-1)">&#10094;</button>
+                    <button class="next" onclick="changeCard(1)">&#10095;</button>
+                </div>
+            </section>
+
+            <section class="blog-post hidden">
+                <h1>Most Likable Experience</h1>
+                <div class="posts">
+                    <div class="top-posts">
+                        <div class="post">
+                            <h2>Post Title 1</h2>
+                            <p>Content of post 1...</p>
+                        </div>
+                        <div class="post">
+                            <h2>Post Title 2</h2>
+                            <p>Content of post 2...</p>
+                        </div>
+                        <div class="post">
+                            <h2>Post Title 3</h2>
+                            <p>Content of post 3...</p>
+                        </div>
+                    </div>
+                    <div class="other-posts">
+                        <div class="post">
+                            <h2>Post Title 4</h2>
+                            <p>Content of post 4...</p>
+                        </div>
+                        <div class="post">
+                            <h2>Post Title 5</h2>
+                            <p>Content of post 5...</p>
+                        </div>
+                        <div class="post">
+                            <h2>Post Title 6</h2>
+                            <p>Content of post 6...</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="about-us hidden">
+                <h1>About Us</h1>
+                <div class="about-info">
+                    <p>Information about Buarnon Buncharoen</p>
+                    <div class="profile-pic"></div>
+                </div>
+            </section>
+
+            <section class="contact-us hidden">
+                <h1>Contact Us</h1>
+                <p>Contact information and form...</p>
+            </section>
+        </main>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

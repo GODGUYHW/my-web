@@ -1,10 +1,9 @@
-/* General Styles */
+
 body {
+    background-color: #A67B5B;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #1A2130;
-    color: #FDFFE2;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -17,144 +16,217 @@ body {
 }
 
 header {
-    background: #5A72A0;
-    color: #FDFFE2;
-    padding: 1rem 0;
+    color: #FED8B1;
+    padding: 20px 0;
 }
 
 header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 auto;
     padding: 0 20px;
+    
 }
 
 header .logo h1 {
     margin: 0;
-    font-size: 1.5rem;
 }
 
-nav ul {
+header nav ul {
     list-style: none;
-    padding: 0;
     margin: 0;
+    padding: 0;
     display: flex;
+    font-size: 20px;
+}
+header nav ul li {
+    margin: 0 10px;
 }
 
-nav ul li {
-    margin-left: 2rem;
-}
-
-nav ul li a {
-    color: #FDFFE2;
+header nav ul li a {
+    color: #FED8B1;
     text-decoration: none;
+    transition: color 0.3s ease; /* เพิ่ม transition เพื่อทำให้การเปลี่ยนสีเนื่องจาก hover เนียนขึ้น */
 }
 
-nav ul li a:hover {
-    text-decoration: underline;
+header nav ul li a:hover {
+    color: #6F4E37; /* เปลี่ยนเป็นสีที่ต้องการเมื่อ hover */
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+.signup-section .container {
+    display: flex;
+    flex-direction: row;
+    background-color: #FED8B1;
+    border-radius: 70px 0 0 70px;
+    height: 650px;
+    position:relative;
+    top: 5px;
+    width: 1200px;
+    z-index: 1;
+    justify-content: center;
 }
 
-main {
-    flex: 1;
+.left {
+    background: #6F4E37;
+    border-radius: 70px 0 0 70px;
+    color: #FED8B1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    position: relative;
 }
 
-.welcome-section {
+.left h2 {
+    margin: 0;
+    font-size: 50px;
+}
+
+.left p {
+    margin: 10px 0 20px;
+    font-size: 20px;
     text-align: center;
-    padding: 5rem 0;
-    background-color: #5A72A0;
 }
 
-.auth-buttons {
-    margin-top: 1rem;
+.right {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.login-button,
-.signup-button {
-    background-color: #FDFFE2;
-    color: #1A2130;
+.right h2 {
+    margin: 0 0 20px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.right form {
+    display: flex;
+    flex-direction: column;
+}
+
+.right form input {
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 14px;
+    background-color: #ECB176;
+    border-radius: 5px;
+    
+}
+
+.right form button {
+    padding: 10px;
+    font-size: 16px;
+    color: white;
+    background-color: #6F4E37;
     border: none;
-    padding: 0.5rem 1rem;
-    margin: 0 0.5rem;
+    border-radius: 5px;
     cursor: pointer;
 }
 
-.login-button:hover,
-.signup-button:hover {
-    background-color: #83B4FF;
+.right form button:hover {
+    background-color: #ECB176;
 }
 
-.featured-places-section,
-.upcoming-events-section {
-    padding: 2rem 0;
+.right form .terms {
+    font-size: 12px;
+    color: #666;
 }
 
-.featured-places-section {
-    background-color: #1A2130;
+.img-wrapper {
+    width: 90%;
+    max-width: 1536px;
+    margin: auto;
+    position: relative;
+    height: 300px;
+    margin-top: 5rem;
+    overflow: hidden;
+    mask-image: linear-gradient(
+        to right,
+        rgba(0,0,0,0),
+        rgba(0,0,0,1) 20%,
+        rgba(0,0,0,1) 80%,
+        rgba(0,0,0,0)
+    );
 }
 
-.upcoming-events-section {
-    background-color: #1A2130;
+.img {
+    width: 200px;
+    height: 250px;
+    position: absolute;
+    left: calc(200px * 3); /* Adjust based on number of images */
+    animation-name: scrollleft;
+    animation-duration: 25s;
+    animation-timing-function:  linear;
+    animation-iteration-count:  infinite;
+    max-width: 100%;
+    height: auto;
 }
 
-.featured-places,
-.upcoming-events {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+.img1 {
+    animation-delay: -25s;
 }
 
-.featured-places div,
-.upcoming-events div {
-    background: #FDFFE2;
-    padding: 1rem;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    width: 30%;
-    margin: 1rem 0;
+.img2 {
+    animation-delay:  -16.67s;
 }
 
-footer {
-    background: #5A72A0;
-    color: #FDFFE2;
-    text-align: center;
-    padding: 1rem 0;
-    margin-top: auto;
+.img3 {
+    animation-delay:  -8.33s;
 }
 
-footer .social-media a {
-    color: #FDFFE2;
-    margin: 0 0.5rem;
-    text-decoration: none;
+
+
+@keyframes scrollleft {
+    from {
+        left: 100%; /* Initial position outside container */
+    }
+    to {
+        left: -200px; /* End position (move left by image width) */
+    }
 }
 
-/* Responsive Styles */
 @media (max-width: 768px) {
     header .container {
         flex-direction: column;
-        text-align: center;
+        align-items: flex-start;
     }
-
-    nav ul {
+    
+    header nav ul {
         flex-direction: column;
-        align-items: center;
+    }
+    
+    header nav ul li {
+        margin: 5px 0;
     }
 
-    nav ul li {
-        margin: 0.5rem 0;
+    header nav ul li a {
+        color: #FED8B1;
+        text-decoration: none;
+        transition: color 0.3s ease;
     }
 
-    .content div {
-        width: 80%;
+    header nav ul li a:hover {
+        color: #6F4E37;
     }
-}
 
-@media (max-width: 480px) {
-    .content {
+    .signup-section .container {
         flex-direction: column;
-        align-items: center;
+        height: auto; /* เพิ่มค่า height: auto เพื่อให้ส่วน Signup Section ปรับความสูงตามเนื้อหาภายใน */
     }
-
-    .content div {
-        width: 90%;
+    
+    .left, .right {
+        width: 100%;
+        padding: 20px;
     }
 }

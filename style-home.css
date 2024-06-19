@@ -1,0 +1,256 @@
+body {
+    background-color: #A67B5B;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    color: #FED8B1;
+    padding: 20px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header .logo h1 {
+    margin: 0;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    font-size: 20px;
+}
+
+header nav ul li {
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: #FED8B1;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #6F4E37;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.feature-place {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    height: 83vh;
+}
+
+.feature-place h1 {
+    color: #FED8B1;
+    margin-bottom: 20px;
+}
+
+.card-slider {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.cards {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.card {
+    width: 300px;
+    margin: 0 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(168, 101, 101, 0.1);
+    overflow: hidden;
+    transition: transform 0.5s ease;
+    background-color: #ECB176;
+    color: #6F4E37;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 10px;
+    text-align: center;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #6F4E37;
+    color: #FED8B1;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 20px;
+    z-index: 1;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.blog-post {
+    margin-top: 50px;
+    height: 83vh;
+    animation: slideIn 1s ease forwards;
+
+}
+
+.blog-post h1 {
+    color: #FED8B1;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.posts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.top-posts, .other-posts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.top-posts .post {
+    width: 30%;
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+.other-posts .post {
+    width: 30%;
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+.post {
+    background-color: #FED8B1;
+    color: #6F4E37;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.post h2 {
+    margin-top: 0;
+}
+
+.about-us {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ECB176;
+    color: #6F4E37;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
+}
+
+
+.about-us, .contact-us {
+    padding: 20px;
+    background-color: #ECB176;
+    color: #6F4E37;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+/* CSS remains the same as previously provided */
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.show {
+    filter: blur(0);
+    transform: translateX(0);
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header nav ul {
+        flex-direction: column;
+    }
+
+    header nav ul li {
+        margin: 5px 0;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .top-posts .post, .other-posts .post {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .about-us {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-us .content {
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .about-us img {
+        margin-top: 20px;
+    }
+}

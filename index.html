@@ -3,23 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wave Motion</title>
+    <title>bAVE</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
 <body>
     <div class="wrapper">
         <header>
             <div class="container">
                 <div class="logo">
-                    <h1>Wave Motion</h1>
+                    <h1>bAVE</h1>
                 </div>
                 <nav>
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="share.html">Share Your Travel Experience</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="forum.html">Forum</a></li>
+                        <li><a href="feature.html">Share Your Travel Experience</a></li>
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="contact.html">Contact Us</a></li>
                     </ul>
@@ -28,49 +25,41 @@
         </header>
 
         <main>
-            <!-- Welcome Section -->
-            <section class="welcome-section" data-aos="fade-up">
-                <h2>Welcome to Wave Motion</h2>
-                <div class="auth-buttons">
-                    <button class="login-button">Log In</button>
-                    <button class="signup-button">Sign Up</button>
-                </div>
-            </section>
-
-            <!-- Featured Places Section -->
-            <section class="featured-places-section" data-aos="fade-right">
-                <h3>Featured Places</h3>
-                <div class="content">
-                    <div class="featured-places" data-aos="fade-right">
-                        <ul id="featured-places-list"></ul>
+            <!-- Sign Up Section -->
+            <section class="signup-section">
+                <div class="container">
+                    <div class="left">
+                        <h2>Welcome to bAVE</h2>
+                        <p>Share your travel experience through bAVE.</p>
+                        <section class="img-wrapper">
+                            <div class="img img1">
+                                <img src="image1.jpg">
+                            </div>
+                            <div class="img img2">
+                                <img src="image2.jpg">
+                            </div>
+                            <div class="img img3">
+                                <img src="image3.jpg">
+                            </div>
+                        </section>
                     </div>
-                </div>
-            </section>
-
-            <!-- Upcoming Events Section -->
-            <section class="upcoming-events-section" data-aos="fade-up">
-                <h3>Upcoming Events</h3>
-                <div class="content">
-                    <div class="upcoming-events" data-aos="fade-up">
-                        <ul id="upcoming-events-list"></ul>
+                    <div class="right">
+                        <h2>Login</h2>
+                        <form action="home.html">
+                            <input type="email" placeholder="E-mail Address" required>
+                            <input type="password" placeholder="Password" required>
+                            <div class="terms">
+                                <input type="checkbox" required> By signing up, you agree with our <a href="#">Terms & Conditions</a>.
+                            </div>
+                            <button type="submit">Log in</button>
+                        </form>
                     </div>
                 </div>
             </section>
         </main>
-
-        <footer>
-            <div class="social-media">
-                <a href="#">Facebook</a>
-                <a href="#">Twitter</a>
-                <a href="#">Instagram</a>
-            </div>
-            <p>&copy; 2024 Wave Motion. All rights reserved.</p>
-        </footer>
+    
     </div>
     <script src="scripts.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+    
 </body>
 </html>
